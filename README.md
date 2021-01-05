@@ -1,7 +1,7 @@
 # Capstone Project
 Fourth Udacity Project
 
-##Project Definition##
+#Project Definition
 This Project is the fourth and last project of the Udacity "Data Science" Nanodegree course.
 
 
