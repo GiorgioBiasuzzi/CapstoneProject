@@ -14,6 +14,7 @@ The metrics used to measure performance is the variance between the predicted pa
 
 # Project Analysis
 Data Preprocessing
+
 The code starts with the data collection using the pandas_datareader library to extract the RBS stock data between the preferred dates.
 
 The code processes the data by following these steps: 
@@ -31,15 +32,18 @@ The code processes the data by following these steps:
 - Plotting the results
 
 Implementation
+
 The model chosen is LSTM (Long Short Term Memory) which is widely used for sequence prediction problems and have proven to be effective in such type of analysis because of its ability to store past information important for the prediction and at the same time discard the non-useful information. The model has been chosen as opposed to an AUTO-ARIMA process because its enhanced predictive power.
 The train & test sets sizes have been chosen to predict & validate the last four years of stock's trend.
 
 Refinement
+
 The code has been refined to drop an index layer from the data source, this was making the data manipulation complicated. The for x loop that manipulated the dates provided a clean and tidy dataset which proved to be useful when performing more complex data handlings required by the MinMaxScaler feature and the LSTM model.
 
 # Conclusion sections
 The chart shows the trend of the stocks over the period 2010-2020. The resulting train green line is very similar to the path of the orange validation line. This confirms us that the Machine Learning technique correctly identified the trend (green line) and predicted a likely pattern which is similar to the actual (orange line). It is important to clarify that the predictions from LSTM are enough to identify whether the stock price will increase or decrease but it provides a good degree of prediction against the validation set derived from the realised stock price.
 
 Real-world Context
+
 This exercise does not intend to predict a random variable like the stock price but to prove the predictive power of the LSTM model given a data set of realised stock prices.
 The effectiveness of the model shows that using this method provides a trusted way to analyse the pattern of a random variable such as the price of a stock.
